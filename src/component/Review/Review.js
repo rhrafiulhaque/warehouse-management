@@ -18,7 +18,7 @@ const Review = ({ review }) => {
                     </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
+                    <small className="text-muted">Ratings: <span className='fw-bold'>{ratings}</span></small>
                 </Card.Footer>
             </Card>
 

@@ -15,6 +15,7 @@ const FeedBack = () => {
                 {
                     reviews.slice(0,3).map(review=><Review key={review.id} review={review}></Review>)
                 }
+                
             </div>
         </div>
     );
