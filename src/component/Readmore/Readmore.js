@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Readmore.css';
 
 const Readmore = ({message}) => {
     const [isReadMore, setReadMore] = useState(false);
