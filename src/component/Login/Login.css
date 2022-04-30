@@ -1,0 +1,11 @@
+.content-height{
+    height: 70vh;
+    width: 50%;
+}
+
+/* make login responsive */
+@media only screen and (max-width:576px) {
+    .content-height{
+        width: 80%;
+    }
+}
