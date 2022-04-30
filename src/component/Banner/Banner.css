@@ -1,0 +1,12 @@
+.banner-img{
+    height: 80vh;
+}
+
+/* make banner responsive */
+@media only screen and (max-width:576px) {
+    .slide-img{
+        height: 100%;
+        width: 100%;
+
+    }
+}
