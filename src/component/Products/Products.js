@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Readmore from '../Readmore/Readmore';
 import './Products.css';
 
 const Products = ({ product }) => {
@@ -14,7 +15,7 @@ const Products = ({ product }) => {
                 <img src={img} className="w-100 product-img" alt="" />
                 <div className="product-details p-2">
                     <h2>{name}</h2>
-                    <p>{description.slice(0, 70)}</p>
+                    <p><Readmore message={description}></Readmore></p>
                     <h3>${price}</h3>
                     <p>Supplier: <span className='fw-bolder'>{supplier}</span></p>
                     <p>Quantity: <span className='fw-bold'>{quantity}</span></p>
