@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "name": "Xiaomi Watch",
+        "price": "1300",
+        "description": "A neurologist is a medical doctor who specializes in treating diseases of the nervous system. The nervous system is made of two parts: the central and peripheral nervous system. It includes the brain and spinal cord.",
+        "img": "https://i.ibb.co/Bj0HvJH/5.jpg",
+        "quantity": "10",
+        "supplier": "Mi"
+        
+    },
+    {
+        "id": 2,
+        "name": "Huawei",
+        "price": "1380",
+        "description": "A neurologist is a medical doctor who specializes in treating diseases of the nervous system. The nervous system is made of two parts: the central and peripheral nervous system. It includes the brain and spinal cord.",
+        "img": "https://i.ibb.co/XF9k64N/8.jpg",
+        "quantity": "15",
+        "supplier": "Hyiunda"
+        
+    },
+    {
+        "id": 3,
+        "name": "Culrd Watch",
+        "price": "300",
+        "description": "A neurologist is a medical doctor who specializes in treating diseases of the nervous system. The nervous system is made of two parts: the central and peripheral nervous system. It includes the brain and spinal cord.",
+        "img": "https://i.ibb.co/Bj0HvJH/5.jpg",
+        "quantity": "14",
+        "supplier": "Curics"
+        
+    },
+    {
+        "id": 4,
+        "name": "Neuro Watch",
+        "price": "900",
+        "description": "A neurologist is a medical doctor who specializes in treating diseases of the nervous system. The nervous system is made of two parts: the central and peripheral nervous system. It includes the brain and spinal cord.",
+        "img": "https://i.ibb.co/XF9k64N/8.jpg",
+        "quantity": "9",
+        "supplier": "Walipda"
+        
+    },
+    {
+        "id": 5,
+        "name": "Redmi Watch",
+        "price": "440",
+        "description": "A neurologist is a medical doctor who specializes in treating diseases of the nervous system. The nervous system is made of two parts: the central and peripheral nervous system. It includes the brain and spinal cord.",
+        "img": "https://i.ibb.co/Bj0HvJH/5.jpg",
+        "quantity": "32",
+        "supplier": "Mi"
+        
+    },
+    {
+        "id": 6,
+        "name": "Uiww Watch",
+        "price": "767",
+        "description": "A neurologist is a medical doctor who specializes in treating diseases of the nervous system. The nervous system is made of two parts: the central and peripheral nervous system. It includes the brain and spinal cord.",
+        "img": "https://i.ibb.co/XF9k64N/8.jpg",
+        "quantity": "34",
+        "supplier": "View"
+        
+    }
+    
+]
