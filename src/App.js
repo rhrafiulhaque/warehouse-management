@@ -7,6 +7,8 @@ import Blog from './component/Blog/Blog';
 import Footer from './component/Footer/Footer';
 import Login from './component/Login/Login';
 import Register from './component/Register/Register';
+import RequireAuth from './component/RequireAuth/RequireAuth';
+import Update from './component/Update/Update';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/update/:productId' element={<RequireAuth>
+          <Update></Update>
+        </RequireAuth>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

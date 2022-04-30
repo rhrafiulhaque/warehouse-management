@@ -7,7 +7,7 @@ const Products = ({ product }) => {
     const { id, name, quantity, img, price, supplier, description } = product;
     const navigate = useNavigate();
     const productDetail= id =>{
-        console.log(id);
+        navigate(`update/${id}`);
     }
     return (
         <div className='  col-md-4 col-sm-12 text-center'>

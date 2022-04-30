@@ -5,6 +5,7 @@ import './Register.css';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import { Button, Form } from 'react-bootstrap';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
     const [
@@ -12,7 +13,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth , {sendEmailVerification: true});
+    ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
@@ -39,8 +40,8 @@ const Register = () => {
     }
 
     return (
-        <div className='register-form container w-50 mx-auto'>
-            <h2 className='text-center mt-2'>Please Register</h2>
+        <div className='content-height container mx-auto'>
+           <h2 className='text-center my-4'>Register to Electro<span className='pink'>Marts</span></h2>
 
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
@@ -58,7 +59,7 @@ const Register = () => {
             </Form>
             <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
                         
-            {/* <SocialLogin></SocialLogin> */}
+            <SocialLogin></SocialLogin>
         </div>
     );
 };
