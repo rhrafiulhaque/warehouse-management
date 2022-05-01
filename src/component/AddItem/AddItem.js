@@ -40,7 +40,7 @@ const AddItem = () => {
                     <Form.Control ref={supplierRef} type="text" placeholder="Enter Supllier Name" required />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    <Form.Control ref={quantityRef} type="text" placeholder="Enter Quantity" required />
+                    <Form.Control ref={quantityRef} type="number" placeholder="Enter Quantity" required />
                 </Form.Group>
                 <Form.Group className="mb-3">
                     <Form.Control ref={urlRef} type="text" placeholder="Enter Picture URL" required />
