@@ -9,8 +9,8 @@ import Login from './component/Login/Login';
 import Register from './component/Register/Register';
 import RequireAuth from './component/RequireAuth/RequireAuth';
 import Update from './component/Update/Update';
-import Items from './component/Items/Items';
 import AddItem from './component/AddItem/AddItem';
+import Items from './component/Items/Items';
 
 function App() {
   return (

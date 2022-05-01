@@ -1,0 +1,10 @@
+.item-add{
+    width: 50%;
+}
+
+/* make login responsive */
+@media only screen and (max-width:576px) {
+    .item-add{
+        width: 80%;
+    }
+}
