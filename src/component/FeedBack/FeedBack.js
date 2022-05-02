@@ -6,7 +6,7 @@ const FeedBack = () => {
     const [reviews,setReview] = useState([]);
     const [loadProduct, setLoadProduct] = useState(false);
     useEffect(()=>{
-        fetch('review.json')
+        fetch('http://localhost:5000/review')
         .then(res=>res.json())
         .then(data=>setReview(data));
     })
@@ -19,8 +19,8 @@ const FeedBack = () => {
             <h1 className='text-center mt-5 fw-bold'>What Our Customer Says!!</h1>
             <div className="row">
                 {
-                    loadProduct? reviews.map(review=><Review key={review.id} review={review}></Review>) :
-                    reviews.slice(0,3).map(review=><Review key={review.id} review={review}></Review>)
+                    loadProduct? reviews.map(review=><Review key={review._id} review={review}></Review>) :
+                    reviews.slice(0,3).map(review=><Review key={review._id} review={review}></Review>)
                 }
                 
             </div>

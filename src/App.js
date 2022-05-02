@@ -14,6 +14,7 @@ import Items from './component/Items/Items';
 import Inventroy from './component/Inventory/Inventory';
 import { ToastContainer } from 'react-toastify';
 import NotFound from './component/NotFound/NotFound';
+import MyItem from './component/MyItem/MyItem';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
         </RequireAuth>}></Route>
         <Route path='/inventory' element={<RequireAuth>
           <Inventroy></Inventroy>
+        </RequireAuth>}></Route>
+        <Route path='/myitem' element={<RequireAuth>
+          <MyItem></MyItem>
         </RequireAuth>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>

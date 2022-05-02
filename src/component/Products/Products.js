@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Nav } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import AddItem from '../AddItem/AddItem';
 import Readmore from '../Readmore/Readmore';
 import './Products.css';
 
@@ -54,6 +56,7 @@ const Products = ({ product }) => {
                     <p>Quantity: <span className='fw-bold'>{quantity}</span></p>
                     <button className='btn-upd' onClick={() => productDetail(_id)}>Update</button>
                     <button className='btn-upd ms-2' onClick={() => deleteProduct(_id)} style={{ background: 'red', color: 'white' }} >Delete</button>
+                    
                 </div>
             </div>
         </div>

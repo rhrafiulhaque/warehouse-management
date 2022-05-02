@@ -8,6 +8,7 @@ import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import axios from 'axios';
 
 
 const Login = () => {
@@ -31,23 +32,25 @@ const Login = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
-        navigate(from, { replace: true });
-    }
 
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
     }
 
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
+        const {data} = await axios.post('http://localhost:5000/login', {email});
+        console.log(data);
+        localStorage.setItem('accessToken',data);
+        navigate(from, { replace: true });
     }
 
-    const navigateRegister = event => {
+
+    const navigateRegister = () => {
         navigate('/register');
     }
 
@@ -80,7 +83,6 @@ const Login = () => {
             <p>New to ElectroMart? <Link to="/register" className='text-danger text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
             <p>Forget Password? <button className='btn btn-link text-danger p-0 mb-1 text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <SocialLogin></SocialLogin>
-            {/* <ToastContainer /> */}
         </div>
     );
 };
