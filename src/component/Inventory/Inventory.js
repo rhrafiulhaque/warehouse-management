@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import HomeProduct from '../HomeProduct/HomeProduct';
-import './Items.css';
+import Products from '../Products/Products';
 
-const Items = () => {
+const Inventroy = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
-            .then(data => setProducts(data));
-    });
+            .then(data => setProducts(data)); 
+    })
     return (
         <div className='container'>
             <h1 className='mt-5 text-center products'>Our Products</h1>
             <div className="row">
                 {
-                    products.slice(0,6).map(product => <HomeProduct key={product._id} product={product}></HomeProduct>)
+                    products.map(product => <Products key={product.id} product={product}></Products>)
                 }
             </div>
         </div>
     );
 };
 
-export default Items;
+export default Inventroy;

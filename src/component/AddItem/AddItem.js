@@ -1,5 +1,9 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import auth from '../../firebase.init';
 import './AddItem.css';
 
 const AddItem = () => {
@@ -9,7 +13,8 @@ const AddItem = () => {
     const supplierRef = useRef('');
     const quantityRef = useRef('');
     const urlRef = useRef('');
-
+    const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -19,7 +24,31 @@ const AddItem = () => {
         const supplier = supplierRef.current.value;
         const quantity = quantityRef.current.value;
         const img = urlRef.current.value;
-        console.log(name,description,price,supplier,quantity,img);
+        const email = user.email;
+        const data={
+            name:name,
+            description:description,
+            price:price,
+            supplier:supplier,
+            quantity:quantity,
+            img:img,
+            email:email
+        }
+
+        const url = `http://localhost:5000/addproduct`;
+        fetch(url,{
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(data)
+        })
+        .then(res=>res.json(0))
+        .then(data=>{
+            toast('Product Added Successfully');
+            navigate('/inventory');
+        })
+
 
     }
     return (
