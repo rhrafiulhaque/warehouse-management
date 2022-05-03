@@ -7,7 +7,7 @@ import './Inventory.css';
 const Inventroy = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://powerful-brushlands-43536.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data)); 
     })
@@ -17,7 +17,7 @@ const Inventroy = () => {
             <Nav.Link as={Link} className="add-btn" to="/additem">Add Item</Nav.Link>
             <div className="row">
                 {
-                    products.map(product => <Products key={product.id} product={product}></Products>)
+                    products.map(product => <Products key={product._id} product={product}></Products>)
                 }
             </div>
         </div>

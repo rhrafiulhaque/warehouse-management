@@ -8,7 +8,7 @@ const Update = () => {
     const { id } = useParams();
     const [singleProduct, setSingleProduct] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://powerful-brushlands-43536.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => {
                 setSingleProduct(data);
@@ -20,7 +20,7 @@ const Update = () => {
         const quantity = event.target.updQuantity.value;
         const updatedQuantity ={quantity};
 
-        fetch(`http://localhost:5000/product/${id}`,{ 
+        fetch(`https://powerful-brushlands-43536.herokuapp.com/product/${id}`,{ 
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -29,7 +29,7 @@ const Update = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            fetch(`http://localhost:5000/product/${id}`)
+            fetch(`https://powerful-brushlands-43536.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => {
                 setSingleProduct(data);
@@ -42,7 +42,7 @@ const Update = () => {
     const delivered=()=>{
         const delivered = singleProduct?.quantity;
         const afterDeliver = {delivered};
-        fetch(`http://localhost:5000/productdelivery/${id}`,{ 
+        fetch(`https://powerful-brushlands-43536.herokuapp.com/productdelivery/${id}`,{ 
             method:'PUT',
             headers:{
                 'content-type':'application/json'
@@ -51,7 +51,7 @@ const Update = () => {
         })
         .then(res=>res.json())
         .then(data=>{
-            fetch(`http://localhost:5000/product/${id}`)
+            fetch(`https://powerful-brushlands-43536.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => {
                 setSingleProduct(data);

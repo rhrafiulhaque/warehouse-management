@@ -6,7 +6,7 @@ const FeedBack = () => {
     const [reviews,setReview] = useState([]);
     const [loadProduct, setLoadProduct] = useState(false);
     useEffect(()=>{
-        fetch('http://localhost:5000/review')
+        fetch('https://powerful-brushlands-43536.herokuapp.com/review')
         .then(res=>res.json())
         .then(data=>setReview(data));
     })

@@ -12,7 +12,7 @@ const Products = ({ product }) => {
 
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://powerful-brushlands-43536.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     })
@@ -20,7 +20,7 @@ const Products = ({ product }) => {
     const deleteProduct = id => {
         const proceed = window.confirm("Are you Sure to delete this Item?");
         if (proceed) {
-            fetch(`http://localhost:5000/product/${id}`, {
+            fetch(`https://powerful-brushlands-43536.herokuapp.com/product/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

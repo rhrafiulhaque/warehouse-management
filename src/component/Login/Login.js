@@ -31,11 +31,14 @@ const Login = () => {
     if (loading || sending) {
         return <Loading></Loading>
     }
-
-
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorElement = <p className='text-danger'>Error: {error.message}</p>
     }
+    if(user){
+        navigate(from, { replace: true });
+    }
+
+   
 
     const handleSubmit = async event => {
         event.preventDefault();
@@ -43,11 +46,11 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        const {data} = await axios.post('http://localhost:5000/login', {email});
-        console.log(data);
+        const {data} = await axios.post('https://powerful-brushlands-43536.herokuapp.com/login', {email});
         localStorage.setItem('accessToken',data);
-        navigate(from, { replace: true });
+       
     }
+    
 
 
     const navigateRegister = () => {

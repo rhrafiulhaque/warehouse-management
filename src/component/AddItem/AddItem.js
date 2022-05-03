@@ -35,7 +35,7 @@ const AddItem = () => {
             email:email
         }
 
-        const url = `http://localhost:5000/addproduct`;
+        const url = `https://powerful-brushlands-43536.herokuapp.com/addproduct`;
         fetch(url,{
             method:'POST',
             headers:{

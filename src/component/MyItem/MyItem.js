@@ -10,7 +10,7 @@ const MyItem = () => {
     useEffect(() => {
         const getMyitem = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/myitem?email=${email}`;
+            const url = `https://powerful-brushlands-43536.herokuapp.com/myitem?email=${email}`;
             fetch(url,{
                 method:'GET',
                 headers:{
@@ -26,7 +26,7 @@ const MyItem = () => {
     const deleteProduct = id => {
         const proceed = window.confirm("Are you Sure to delete this Item?");
         if (proceed) {
-            fetch(`http://localhost:5000/product/${id}`, {
+            fetch(`https://powerful-brushlands-43536.herokuapp.com/product/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
