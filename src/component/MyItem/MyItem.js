@@ -58,7 +58,7 @@ const MyItem = () => {
                                 <div className="product-details p-2">
                                     <h2>{item.name}</h2>
                                     <p> {item.description}</p>
-                                    <h3>${item.price}</h3>
+                                    <h3>${item.prices}</h3>
                                     <p>Supplier: <span className='fw-bolder'>{item.supplier}</span></p>
                                     <p>Quantity: <span className='fw-bold'>{item.quantity}</span></p>
                                     <button className='btn-upd' onClick={() => productDetail(item._id)}>Update</button>
