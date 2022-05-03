@@ -17,7 +17,9 @@ const Update = () => {
 
     const updateQuantity= event =>{
         event.preventDefault();
-        const quantity = event.target.updQuantity.value;
+        const oldQuantity = singleProduct.quantity;
+        const newQuantity = event.target.updQuantity.value;
+        const quantity = parseInt(oldQuantity) + parseInt(newQuantity);
         const updatedQuantity ={quantity};
 
         fetch(`https://powerful-brushlands-43536.herokuapp.com/product/${id}`,{ 
